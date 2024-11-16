@@ -1,0 +1,19 @@
+---
+# tasks file for 2do_parcial
+- name: Generar archivo para alumno
+  template:
+    src: datos_alumno.j2
+    dest: /tmp/2do_parcial/alumno/datos_alumno.txt
+  vars:
+    nombre: "TuNombre"
+    apellido: "TuApellido"
+    division: "TuDivision"
+
+- name: Generar archivo para equipo
+  template:
+    src: datos_equipo.j2
+    dest: /tmp/2do_parcial/equipo/datos_equipo.txt
+  vars:
+    ip: "TuIP"
+    distro: "TuDistribucion"
+    cores: "TuCantidadDeCores"
